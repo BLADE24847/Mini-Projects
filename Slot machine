@@ -1,0 +1,77 @@
+import random
+
+
+
+user_input1 = int(input("enter the amount you want to deposit - "))
+deposited_cash = user_input1
+
+def gamble():
+    global bet_amount
+    rounds = int(input("Please enter how many rounds you want to play - "))
+    for _ in range(rounds):                                
+            bet_amount = float(input("Enter bet amount - "))
+            after_bet_cash = deposited_cash - bet_amount
+            slots = ("a", "b", "c")
+            slot1 = random.choice(slots)
+            slot2 = random.choice(slots)
+            slot3 = random.choice(slots)
+            print("[",slot1,"]","[",slot2,"]","[",slot3,"]")
+            if slot1 == slot2 == slot3:
+                win_amount = bet_amount * 2
+                final_amount = win_amount + deposited_cash
+                float(final_amount)
+                print("You won!")
+                print("current amount: ", final_amount)
+            elif slot1 == slot2:
+                 win_amount = bet_amount + 5
+                 final_amount =  win_amount + deposited_cash
+                 float(final_amount)
+                 print("You won!")
+                 print("current amount: ", final_amount)
+            elif slot1 == slot3:
+                 win_amount = bet_amount + 5
+                 final_amount =  win_amount + deposited_cash
+                 float(final_amount)
+                 print("You won!")
+                 print("current amount: ", final_amount)
+            elif slot2 == slot1:
+                 win_amount = bet_amount + 5
+                 final_amount =  win_amount + deposited_cash
+                 float(final_amount)
+                 print("You won!")
+                 print("current amount: ", final_amount)
+            elif slot2 == slot3:
+                 win_amount = bet_amount + 5
+                 final_amount =  win_amount + deposited_cash
+                 float(final_amount)
+                 print("You won!")
+                 print("current amount: ", final_amount)
+            elif slot3 == slot1:
+                 win_amount = bet_amount + 5
+                 final_amount =  win_amount + deposited_cash
+                 float(final_amount)
+                 print("You won!")
+                 print("current amount: ", final_amount)
+            elif slot3 == slot2:
+                 win_amount = bet_amount + 5
+                 final_amount =  win_amount + deposited_cash
+                 float(final_amount)
+                 print("You won!")
+                 print("current amount: ", final_amount)
+            else:
+                 float(after_bet_cash)
+                 print("You lose")
+                 print(after_bet_cash)
+                 
+gamble()       
+        
+    
+            
+
+
+
+
+
+
+
+    
